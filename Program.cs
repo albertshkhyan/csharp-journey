@@ -5,190 +5,90 @@ namespace LearnCsharpForBeginners
     public class Program
     {
         public static void Main()
-        { 
-            // Data Types and Variables
-            
-            // don't use special charecters like %&! and etc. And can't start with number
+        {
+        // Task: Reading and Displaying a Floating-Point Number
+        // Create a C# console application that reads a floating-point number from the user, converts the input from a string to a float,
+        // and then displays the floating-point number back to the console with a formatted message.
+		// Purpose of Console.ReadLine() -  User Input: To interact with the user and get input data during the execution of the program
+        // Console ReadLine always return string data types
+        // 1
+        // Console.WriteLine("Enter Floating-Point Number ");
+        // float userInput = 0;
+        // userInput = float.Parse(Console.ReadLine());// convert user input data to float
+        // Console.WriteLine("Your answer is: " + userInput);
 
-            
-            // # INT
-			// 1.
-            // int n;
-            // n = 0;
-            // n = -3;
-            // n = 100;
-            // Console.WriteLine(n);
-            
-            // 2.
-            // int n = 20;
-            // Console.WriteLine(n);
-            //
-            
-            // Revieve data
-            // Console.ReadKey();
-            
-            // 3.
-            // merge outputs - concatatnion
-            // Console.WriteLine("N - " + n ".");
-            
-            
-            
-            
-            // ****** Work with number ******
 
-            // 1 UINT
-            // With uint we can't store negative numbers like -n
-            // uint n = 10; // Correct
-            // uint n2 = -10; // Incorrect -  error CS0031: Constant value '-10' cannot be converted to a 'uint' 
-            // Console.WriteLine("N - " + n2 + ".");
-            
-            
-            // 2 BYTE
-            // error CS1012: Too many characters in character literal 
-            // byte n = 255;// 8 bit
-            // Console.WriteLine('n: byte' + n);// error CS1012: Too many characters in character literal - for this ''
-            // n = 15; // correct
-            // n = 256; // incorrect - Constant value '256' cannot be converted to a 'byte'
-            // n = -256;// incorrect 
-            // n = -255;// correct 
-            // Console.WriteLine("n: byte " + n);
-            
-            
-            // Why use byte instead of int
-            // int use 4 times more operating memory than the byte date type
-            
-            
-            // 3 SHORT
-            // short n = 256;//correct
-            // n = 1450;// correct
-            // n = 32650;// correct
-            // n = 32655;// correct
-            // n = 32755;// correct
-            // n = 32767;// correct
-            // n = 32768;// incorrect - max value is 32767 - error CS0031: Constant value '33755' cannot be converted to a 'short'
-            // Console.WriteLine("n + " + n);
-            
-            
-            /*
-             * Sysytem.int32
-             * int - use 32-bit - Range: -2,147,483,648 to 2,147,483,647
-             * byte - use 8-bit - Range: 0 to 255
-             * short - use 16-bit - -32,768 to 32,767
-             */
-            
-            
-            
-            // 4 LONG
-            // 64 bits - Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
-            // long n = 92233368547808;
-            // Console.WriteLine("Long: " + n);// correct concatation
-            // Console.WriteLine("Long: +", n);// incorrect concatation
-            
-            
-            
-            
-            // 5 FLOAT and DOUBLE
-			// 1. FLOAT
-			// numbers with point
-			// Size: 32 bits (4 bytes)
-			// Range: Approximately ±1.5 × 10^−45 to ±3.4 × 10^38
-            // error CS0664: Literal of type double cannot be implicitly converted to type 'float'; use an 'F' suffix to create a literal of this type
-            // float n = 12.53232;// incorrect
-            // n = -29952.323225;// incorrect
-            // float n = 12.53232F;// correct - in last we should add f/F
-            // n = -29952.323225f;// correct -  in last we should add f/F
-            // Console.WriteLine("N: " + n);
+        // 2. Math Actions
+        // float userInput = float.Parse(Console.ReadLine());
+        // float result = 0;
+        // result = userInput + 10;
+        // result = userInput + 10f;// readonly struct System.Single ===  floating-point number
+        // result = userInput - 10f;// 
+        // result = userInput * 10f;// 
+        // result = userInput / 10f;//
+        // result = userInput % 10f;//
 
-			// 2. DOUBLE
-			// Size: 64 bits (8 bytes)
-       		// Double example without the suffix
-            // double doubleNumber1 = 12.53232;
-            // Console.WriteLine("Double Number 1: " + doubleNumber1);
+        // result += 5f;
 
-            // Double example with the suffix
-            // double doubleNumber2 = 12.53232d;
-            // Console.WriteLine("Double Number 2: " + doubleNumber2);
+        // Console.WriteLine("Result: " + result);
+
+         // convert string to float data type
+         // important nuance about float - when we are trying to enter a number from the keyboard, than here we need
+         // to set comma ,
 
 
 
-			// # STRING
-			// string word = "Hellow World";
-			// Console.WriteLine("Word - " + word);
+         // 3. Maths
 
-			// int number = 3300;
-			// are being concatenated 
-			// Console.WriteLine(word + number + ":)");// World3300:)
-
-
-			//# CHAR
-			// Size: 16 bits (2 bytes)
-			// Represents a single Unicode character.
-
-			// In C#, a char (short for character) represents a single character and uses single quotes to distinguish 
-			// it from a string, which uses double quotes. Here's why:
-
-			// string greeting = "Hello, World!";
-			// char symbol = '3';// here should be used only single quotes - ''
+        // CONSTANTS
+        //  const int number = 18;
+        //  number = 20;//  error CS0131: The left-hand side of an assignment must be a variable, property or indexer 
+        //  Console.WriteLine(number);
 
 
+        // MATH    
+        // math constants
+        // Console.WriteLine("PI" + Math.PI);// 3.141592653589793
+        // Console.WriteLine("E" + Math.E);// 718281828459045
 
-			// # BOOL
-			// bool isHappy = false;// Output: False
-			// Console.WriteLine("isHappy: " + isHappy);
-			
+        // // math functions
+        // //  C# uses PascalCase as a naming convention
+        // Console.WriteLine("Absolute number: " + Math.Abs(-20));// 20
+        // Console.WriteLine("Math Ceil: " + Math.Ceiling(4.11));// 5
+        // Console.WriteLine("Math Floor: " + Math.Floor(4.11));// 4
+        // Console.WriteLine("Math nearest intenger : " + Math.Round(4.11));// 5
+
+        // // Math.Min, Math.Max
 
 
-	/*
-| Category         | Data Types                                                                                  |
-|------------------|---------------------------------------------------------------------------------------------|
-| Value Types      | byte, sbyte, short, ushort, int, uint, long, ulong, float, double, decimal, bool, char      |
-| Enums            | User-defined types with named constants                                                     |
-| Structs          | User-defined value types                                                                    |
-| Reference Types  | string, arrays, classes, interfaces, delegates                                              |
-| Pointer Types    | int*, char*, etc. (used in unsafe code)                                                     |
-| Special Types    | Nullable<T> or T? (nullable value types)                                                    |
-*/
+        //  Console.WriteLine("Number return with specifed Power  Math.Pow(5, 2) : " + Math.Pow(5, 3));// 125 - 5*5*5
 
 
 
+        /*
+        using System;
 
-			// ******** Convert Data Types ********
-		
-			
+class Program
+{
+    static void Main()
+    {
+        // Հարցնում ենք օգտատիրոջից շրջանի շառավիղը (Radius)
+        Console.WriteLine("Введите радиус круга: ");
+        double radius = Convert.ToDouble(Console.ReadLine());
 
+        // Հաշվարկում ենք շրջանի մակերեսը
+        // Հարաբերությունը (\pi)-ի
+        // 	1.	Շրջանի շրջագծի և տրամագծի հարաբերությունը:
+        // (\pi) թիվը սահմանում է հարաբերությունը շրջանի շրջագծի (կամ պարագծի) (C)-ի և նրա տրամագծի (d)-ի միջև:
+        // \pi = \frac{C}{d}
 
-			// Using Convert class
-			// int intVal = 123;
-			// Console.WriteLine("intVal: " + Convert.toInt32(intVal));//  error CS0117: 'Convert' does not contain a definition for 'toInt32'
-			// Console.WriteLine("intVal: " + Convert.ToInt32(intVal));
-			// intVal = 4.5; //  error CS0266: Cannot implicitly convert type 'double' to 'int'. An explicit conversion exists (are you missing a cast?)
-			// Console.WriteLine("intVal: " + Convert.ToInt32(intVal));
+        double area = Math.PI * Math.Pow(radius, 2);
 
-
-			// Implicit conversion
-			// int intVal = 123;
-			// double doubleVal = intVal; // Correct
-			// doubleVal = 123.5;
-			// Console.WriteLine("Implicit conversion: " + doubleVal);// Output: 123,5
-
-
-
-  			// Task: Reading and Displaying Integer Inputs
-
-			// Initialize variables to store the integer inputs from the user
-			int num1 = 0, num2 = 0;
-
-			// Read user input from the console, convert the input from string to integer
-			// Note: If the user inputs a float number, a System.FormatException error will occur.
-			// Example: Inputting "3.14" will cause an error, while "5" (an integer) is acceptable.
-			num1 = Convert.ToInt32(Console.ReadLine());
-			num2 = Convert.ToInt32(Console.ReadLine());
-
-			// Display the integers entered by the user
-			Console.WriteLine("First: " + num1 + ". Second: " + num2);
-			
-
-
+        // Տպում ենք արդյունքը
+        Console.WriteLine("Площадь круга с радиусом {0} равна {1}", radius, area);
+    }
+}
+        */
 
         }
     }
