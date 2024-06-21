@@ -6,198 +6,113 @@ namespace LearnCsharpForBeginners
     {
         public static void Main()
         {
-        // ******** CONDITIONS ********
+        // ******** LOOPS ********
 
-
-        // # if-else
         /*
-        1. if Statement
-            The if statement allows you to execute a block of code if a specified condition is true.
+        1. for Loop
+            The for loop is typically used when you know in advance how many times you want to execute a statement or a block of statements.
         */
 
-        // int a = 10;
-        // if (a > 5)
+        // for (int i = 0; i < 10; i++)
         // {
-        //     Console.WriteLine("a is greater than 5");
-        // }
-
-        /*
-        2. else Statement
-            The else statement allows you to execute a block of code if the condition in the if statement is false.
-        */
-
-        // int a = 3;
-        // if (a > 5)
-        // {
-        //     Console.WriteLine("a is greater than 5");
-        // }
-        // else
-        // {
-        //     Console.WriteLine("a is not greater than 5");
-        // }
-
-        /*
-            3. else if Statement
-            The else if statement allows you to check multiple conditions.
-        */
-
-        // int a = 5;
-        // if (a > 5)
-        // {
-        //     Console.WriteLine("a is greater than 5");
-        // }
-        // else if (a == 5)
-        // {
-        //     Console.WriteLine("a is equal to 5");
-        // }
-        // else
-        // {
-        //     Console.WriteLine("a is less than 5");
+        //     Console.WriteLine("i = " + i);
         // }
 
 
         /*
-        in C#, you can write if or else statements without curly braces {} if the statement is a single line. This is called single-line if or else syntax. 
-        Here is an example:
+        2. foreach Loop
+            The foreach loop is used to iterate over a collection, such as an array or a list.
 
-        Without Curly Braces
-        */
-
-        // int a = 5;
-
-        // if (a > 5)
-        //     Console.WriteLine("a is greater than 5");
-        // else if (a == 5)
-        //     Console.WriteLine("a is equal to 5");
-        // else
-        //     Console.WriteLine("a is less than 5");
-
-
-
-        /*
-        However, it is generally recommended to use curly braces even for single-line statements for better readability and to avoid errors,
-        especially when modifying code in the future. Here is the same example with curly braces:
-        */
-
-        // int a = 10;
-
-        // if (a > 5)
-        // {
-        //     Console.WriteLine("a is greater than 5");
-        // }
-        // else
-        // {
-        //     Console.WriteLine("a is not greater than 5");
-        // }
-
-
-
-        /*
-            4. switch Statement
-        */ 
-
-        // int day = 3;
-        // switch (day) 
-        // {
-        //     case 1:
-        //         Console.WriteLine("Monday");
-        //         break;
-        //     case 2:
-        //         Console.WriteLine("Tuesday");
-        //         break;
-        //     case 3:
-        //         Console.WriteLine("Wednesday");
-        //         break;
-        //     default:
-        //         Console.WriteLine("Another day");
-        //         break;
-        // }
-
-
-        /* 5. Ternary Operator */ 
-
-        // int a = 10;
-        // string result = (a > 5) ? "a is greater than 5" : "a is not greater than 5";
-        // Console.WriteLine(result);
-
-        // int a = 10;
-        // string result = a > 5 ? "a is greater than 5" : "a is not greater than 5";
-        // Console.WriteLine(result);
-
-
-        /*  Here's a more complex example to illustrate the importance of parentheses: */
-
-        // int a = 10;
-        // int b = 15;
-        // string result = (a > 5 && b < 20) ? "Condition is true" : "Condition is false";
-        // Console.WriteLine(result);
-
-
-        /* Without parentheses, it can become unclear which parts of the expression are being evaluated as the condition: */ 
-
-        // int a = 10;
-        // int b = 15;
-        // string result = a > 5 && b < 20 ? "Condition is true" : "Condition is false";
-        // Console.WriteLine(result);
-
-
-        /*
-            Practical Example
-            Here is a practical example that combines several conditions:
-        */
-
-         int age = 25;
-            string category;
-
-            if (age < 13)
+            foreach (elementType element in collection)
             {
-                category = "Child";
-            }
-            else if (age < 20)
-            {
-                category = "Teenager";
-            }
-            else if (age < 60)
-            {
-                category = "Adult";
-            }
-            else
-            {
-                category = "Senior";
+                // Code to execute for each element
             }
 
-            Console.WriteLine($"You are categorized as: {category}");
+        */
 
-            // Switch example
-            int grade = 85;
-            string gradeLetter;
+        // int[] numbers = { 1, 2, 3, 4, 5 };
+        // foreach (int number in numbers)
+        // {
+        //     Console.WriteLine("number = " + number);
+        // }
 
-            switch (grade / 10)
-            {
-                case 10:
-                case 9:
-                    gradeLetter = "A";
-                    break;
-                case 8:
-                    gradeLetter = "B";
-                    break;
-                case 7:
-                    gradeLetter = "C";
-                    break;
-                case 6:
-                    gradeLetter = "D";
-                    break;
-                default:
-                    gradeLetter = "F";
-                    break;
-            }
+        /*
+        Collection Syntax
+            A collection is a data structure that groups multiple elements together. In C#, collections come in various types, 
+            each with specific characteristics and use cases. Collections include arrays, lists, dictionaries, queues, stacks, and more.
 
-            Console.WriteLine($"Your grade is: {gradeLetter}");
+            Collection Types
+                Benefits include dynamic sizing, easy element addition/removal, and built-in methods for data operations.
 
-            // Ternary operator example
-            bool isEven = (age % 2 == 0) ? true : false;
-            Console.WriteLine($"Is the age even? {isEven}");
+            Here is the ordered list of collection types in C#:
+                Collection Types
+                Array
+                List
+                Dictionary
+                HashSet
+                Queue
+                Stack
+                LinkedList
+                ObservableCollection
+        */
+            
 
+         /*
+            3. while Loop
+            The while loop is used when you want to execute a block of code as long as a specified condition is true.
+         */
+
+        // int i = 0;
+        // while (i < 10)
+        // {
+        //     Console.WriteLine("i = " + i);
+        //     i++;
+        // }
+
+
+        /*
+        4. do-while Loop
+            The do-while loop is similar to the while loop, but it guarantees that the code block is executed at least once.
+
+            do-while ցիկլը նման է while ցիկլին, սակայն այն երաշխավորում է, որ կոդի բլոկը կկատարվի առնվազն մեկ անգամ, նույնիսկ եթե պայմանը սկզբից իսկ կեղծ է:
+        */
+
+        // int i = 0;
+        // do
+        // {
+        //     Console.WriteLine("i = " + i);
+        //     i++;
+        // } while (i < 10);
+
+
+        // ******** Practical Examples ********
+
+        // for (int i = 1; i <= 5; i++)
+        // {
+        //     Console.WriteLine($"Square of {i} is {i * i}");
+        // }
+
+
+        // string[] fruits = { "Apple", "Banana", "Cherry" };
+        // foreach (string fruit in fruits)
+        // {
+        //     Console.WriteLine(fruit);
+        // }
+
+        // int counter = 0;
+        // while (counter < 3)
+        // {
+        //     Console.WriteLine($"Counter is at {counter}");
+        //     counter++;
+        // }
+
+
+        int num = 1;
+        do
+        {
+            Console.WriteLine($"Number is {num}");
+            num++;
+        } while (num <= 3);
 
 
         }
