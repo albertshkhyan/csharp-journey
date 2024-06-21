@@ -6,89 +6,199 @@ namespace LearnCsharpForBeginners
     {
         public static void Main()
         {
-        // Task: Reading and Displaying a Floating-Point Number
-        // Create a C# console application that reads a floating-point number from the user, converts the input from a string to a float,
-        // and then displays the floating-point number back to the console with a formatted message.
-		// Purpose of Console.ReadLine() -  User Input: To interact with the user and get input data during the execution of the program
-        // Console ReadLine always return string data types
-        // 1
-        // Console.WriteLine("Enter Floating-Point Number ");
-        // float userInput = 0;
-        // userInput = float.Parse(Console.ReadLine());// convert user input data to float
-        // Console.WriteLine("Your answer is: " + userInput);
+        // ******** CONDITIONS ********
 
 
-        // 2. Math Actions
-        // float userInput = float.Parse(Console.ReadLine());
-        // float result = 0;
-        // result = userInput + 10;
-        // result = userInput + 10f;// readonly struct System.Single ===  floating-point number
-        // result = userInput - 10f;// 
-        // result = userInput * 10f;// 
-        // result = userInput / 10f;//
-        // result = userInput % 10f;//
+        // # if-else
+        /*
+        1. if Statement
+            The if statement allows you to execute a block of code if a specified condition is true.
+        */
 
-        // result += 5f;
+        // int a = 10;
+        // if (a > 5)
+        // {
+        //     Console.WriteLine("a is greater than 5");
+        // }
 
-        // Console.WriteLine("Result: " + result);
+        /*
+        2. else Statement
+            The else statement allows you to execute a block of code if the condition in the if statement is false.
+        */
 
-         // convert string to float data type
-         // important nuance about float - when we are trying to enter a number from the keyboard, than here we need
-         // to set comma ,
+        // int a = 3;
+        // if (a > 5)
+        // {
+        //     Console.WriteLine("a is greater than 5");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("a is not greater than 5");
+        // }
+
+        /*
+            3. else if Statement
+            The else if statement allows you to check multiple conditions.
+        */
+
+        // int a = 5;
+        // if (a > 5)
+        // {
+        //     Console.WriteLine("a is greater than 5");
+        // }
+        // else if (a == 5)
+        // {
+        //     Console.WriteLine("a is equal to 5");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("a is less than 5");
+        // }
 
 
+        /*
+        in C#, you can write if or else statements without curly braces {} if the statement is a single line. This is called single-line if or else syntax. 
+        Here is an example:
 
-         // 3. Maths
+        Without Curly Braces
+        */
 
-        // CONSTANTS
-        //  const int number = 18;
-        //  number = 20;//  error CS0131: The left-hand side of an assignment must be a variable, property or indexer 
-        //  Console.WriteLine(number);
+        // int a = 5;
 
-
-        // MATH    
-        // math constants
-        // Console.WriteLine("PI" + Math.PI);// 3.141592653589793
-        // Console.WriteLine("E" + Math.E);// 718281828459045
-
-        // // math functions
-        // //  C# uses PascalCase as a naming convention
-        // Console.WriteLine("Absolute number: " + Math.Abs(-20));// 20
-        // Console.WriteLine("Math Ceil: " + Math.Ceiling(4.11));// 5
-        // Console.WriteLine("Math Floor: " + Math.Floor(4.11));// 4
-        // Console.WriteLine("Math nearest intenger : " + Math.Round(4.11));// 5
-
-        // // Math.Min, Math.Max
-
-
-        //  Console.WriteLine("Number return with specifed Power  Math.Pow(5, 2) : " + Math.Pow(5, 3));// 125 - 5*5*5
+        // if (a > 5)
+        //     Console.WriteLine("a is greater than 5");
+        // else if (a == 5)
+        //     Console.WriteLine("a is equal to 5");
+        // else
+        //     Console.WriteLine("a is less than 5");
 
 
 
         /*
-        using System;
-
-class Program
-{
-    static void Main()
-    {
-        // Հարցնում ենք օգտատիրոջից շրջանի շառավիղը (Radius)
-        Console.WriteLine("Введите радиус круга: ");
-        double radius = Convert.ToDouble(Console.ReadLine());
-
-        // Հաշվարկում ենք շրջանի մակերեսը
-        // Հարաբերությունը (\pi)-ի
-        // 	1.	Շրջանի շրջագծի և տրամագծի հարաբերությունը:
-        // (\pi) թիվը սահմանում է հարաբերությունը շրջանի շրջագծի (կամ պարագծի) (C)-ի և նրա տրամագծի (d)-ի միջև:
-        // \pi = \frac{C}{d}
-
-        double area = Math.PI * Math.Pow(radius, 2);
-
-        // Տպում ենք արդյունքը
-        Console.WriteLine("Площадь круга с радиусом {0} равна {1}", radius, area);
-    }
-}
+        However, it is generally recommended to use curly braces even for single-line statements for better readability and to avoid errors,
+        especially when modifying code in the future. Here is the same example with curly braces:
         */
+
+        // int a = 10;
+
+        // if (a > 5)
+        // {
+        //     Console.WriteLine("a is greater than 5");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("a is not greater than 5");
+        // }
+
+
+
+        /*
+            4. switch Statement
+        */ 
+
+        // int day = 3;
+        // switch (day) 
+        // {
+        //     case 1:
+        //         Console.WriteLine("Monday");
+        //         break;
+        //     case 2:
+        //         Console.WriteLine("Tuesday");
+        //         break;
+        //     case 3:
+        //         Console.WriteLine("Wednesday");
+        //         break;
+        //     default:
+        //         Console.WriteLine("Another day");
+        //         break;
+        // }
+
+
+        /* 5. Ternary Operator */ 
+
+        // int a = 10;
+        // string result = (a > 5) ? "a is greater than 5" : "a is not greater than 5";
+        // Console.WriteLine(result);
+
+        // int a = 10;
+        // string result = a > 5 ? "a is greater than 5" : "a is not greater than 5";
+        // Console.WriteLine(result);
+
+
+        /*  Here's a more complex example to illustrate the importance of parentheses: */
+
+        // int a = 10;
+        // int b = 15;
+        // string result = (a > 5 && b < 20) ? "Condition is true" : "Condition is false";
+        // Console.WriteLine(result);
+
+
+        /* Without parentheses, it can become unclear which parts of the expression are being evaluated as the condition: */ 
+
+        // int a = 10;
+        // int b = 15;
+        // string result = a > 5 && b < 20 ? "Condition is true" : "Condition is false";
+        // Console.WriteLine(result);
+
+
+        /*
+            Practical Example
+            Here is a practical example that combines several conditions:
+        */
+
+         int age = 25;
+            string category;
+
+            if (age < 13)
+            {
+                category = "Child";
+            }
+            else if (age < 20)
+            {
+                category = "Teenager";
+            }
+            else if (age < 60)
+            {
+                category = "Adult";
+            }
+            else
+            {
+                category = "Senior";
+            }
+
+            Console.WriteLine($"You are categorized as: {category}");
+
+            // Switch example
+            int grade = 85;
+            string gradeLetter;
+
+            switch (grade / 10)
+            {
+                case 10:
+                case 9:
+                    gradeLetter = "A";
+                    break;
+                case 8:
+                    gradeLetter = "B";
+                    break;
+                case 7:
+                    gradeLetter = "C";
+                    break;
+                case 6:
+                    gradeLetter = "D";
+                    break;
+                default:
+                    gradeLetter = "F";
+                    break;
+            }
+
+            Console.WriteLine($"Your grade is: {gradeLetter}");
+
+            // Ternary operator example
+            bool isEven = (age % 2 == 0) ? true : false;
+            Console.WriteLine($"Is the age even? {isEven}");
+
+
 
         }
     }
